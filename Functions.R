@@ -134,6 +134,15 @@ dobD <- as.Date(dob, "%d-%m-%y")
 dob
 dobD
 dobtoday = c(Sys.Date() - dob)
+v <- c("01-3-1991", "02-10-1991","14-10-1991")
+v
+v1 <- as.Date(v, "%d-%m-%Y")
+v2 <-round((Sys.Date() - v1)/365)
+v2
+library("eeptools")
+floor(age_calc(as.Date(v, "%d-%m-%Y"),units = "years"))
+Sys.Date()
+?age_calc
 v <- c(17,18,NA,19,20,23,24,NA,NaN)
 is.na(v)
 sum(is.na(v))
@@ -146,4 +155,38 @@ log(-10)
 10^1000000000000000000000000000000000000000000000000000000000000000
 is.na(v)
 is.nan(v)
+
+version
+
+
+# Apply
+dir()
+ozone = read.table("Ozone_data.csv", header = TRUE, sep = ",")
+ozone
+getwd()
+complete.cases(ozone)
+ozone_clean = ozone[complete.cases(ozone),]
+ozone_clean
+dim(ozone_clean)
+ozone_clean
+v3 = lapply(ozone_clean,sum)
+?lapply
+v = sapply(ozone_clean,sum)
+v
+dim(v)
+summary(v)
+str(v)
+v1 = sapply(ozone_clean, unique)
+v1
+str(ozone)
+str(v3)
+v4 = sapply(ozone_clean, prod)
+v4
+apply(ozone_clean,2,sum)
+apply(ozone_clean,1,sum)
+a=array(1:8, c(2,2,2))
+a
+apply(a,3,sum)
+apply(a,1,sum)
+apply(a,c(1,2),sum)
 
