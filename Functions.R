@@ -134,7 +134,9 @@ dobD <- as.Date(dob, "%d-%m-%y")
 dob
 dobD
 dobtoday = c(Sys.Date() - dob)
-v <- c("01-3-1991", "02-10-1991","14-10-1991")
+v <- c("01-3-1991", "02-10-1992","14-10-1993")
+v1 <- c("01-3-1994", "02-10-1995","14-10-1996")
+
 v
 v1 <- as.Date(v, "%d-%m-%Y")
 v2 <-round((Sys.Date() - v1)/365)
@@ -169,9 +171,9 @@ ozone_clean = ozone[complete.cases(ozone),]
 ozone_clean
 dim(ozone_clean)
 ozone_clean
-v3 = lapply(ozone_clean,sum)
+v3 = lapply(ozone_clean,sum)  #list
 ?lapply
-v = sapply(ozone_clean,sum)
+v = sapply(ozone_clean,sum)   #simplify
 v
 dim(v)
 summary(v)
@@ -189,4 +191,41 @@ a
 apply(a,3,sum)
 apply(a,1,sum)
 apply(a,c(1,2),sum)
+sapply(ozone_clean,sum)
+apply(ozone_clean,2,sum)
+age<-function(x){
+  return(floor((Sys.Date() - as.Date(x,"%d-%m-%Y"))/365))
+}
+age("02-10-1991") 
+v <- c("01-3-1991", "02-10-1992","14-10-1993")
+v1<- c("01-3-1994", "02-10-1995","14-10-1996")
+mapply(age,v1,v2)  #multiple
+age_cal<-function(x,y){
+  return(floor((x - y)/365))
+}
+mapply(age_cal)
+
+loop <- function(x){
+  x=2
+  for(i in 1:10){
+    x=x+1
+    print(x)
+    }
+return(x)
+}
+loop()
+
+
+mean_var<- function(x){
+  y <- mean(x)
+  z <- var(x)
+  v <- c(y,z)
+  names(v) <- c("mean","var")
+  return(v)
+}
+mean_var(c(1,2,3,4,5,6,7,9))
+mean_var(1)
+
+#tapply
+
 
