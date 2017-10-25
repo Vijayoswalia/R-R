@@ -191,7 +191,12 @@ a
 apply(a,3,sum)
 apply(a,1,sum)
 apply(a,c(1,2),sum)
-sapply(ozone_clean,sum)
+sapply(ozone_clean,sum)  #give output in any datastructure
+lapply(ozone_clean,sum)  #gives output only in list
+tapply(ozone_clean$Ozone, ozone_clean$Month, sum)  #only apply funct() used on vector,
+                                                    #used for grouping
+aggregate(ozone_clean[,c(1,2,3,4)], list(ozone_clean$Month),summary) 
+#used for grouping more than 1 column
 apply(ozone_clean,2,sum)
 age<-function(x){
   return(floor((Sys.Date() - as.Date(x,"%d-%m-%Y"))/365))
@@ -203,7 +208,7 @@ mapply(age,v1,v2)  #multiple
 age_cal<-function(x,y){
   return(floor((x - y)/365))
 }
-mapply(age_cal)
+mapply(age_cal, v,v1)
 
 loop <- function(x){
   x=2
@@ -227,5 +232,5 @@ mean_var(c(1,2,3,4,5,6,7,9))
 mean_var(1)
 
 #tapply
-
-
+tapply(ozone_clean$Ozone, ozone_clean$Month, sum)
+aggregate(ozone_clean[,c(1,2,3,4)], list(ozone_clean$Month),summary)
