@@ -16,3 +16,6 @@
 v = seq(10,90,10)
 sd(v)
 var(v)
+
+#Anscombe's quartet
+
