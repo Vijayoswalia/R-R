@@ -1,0 +1,26 @@
+## for graphics
+install.packages("stringr")
+install.packages("bindr")
+install.packages("plyr")
+install.packages("deplyr")
+install.packages("curl")
+install.packages("R6")
+install.packages("ggplot2")
+install.packages("httr")
+install.packages("plotrix")
+install.packages("maps")
+install.packages("plotly")
+install.packages("scatterplot3d")
+install.packages("cars")
+install.packages("ape")
+install.packages("tm")
+install.packages("SnowballC")
+install.packages("wordcloud")
+install.packages("xlsx")
+install.packages("readxl")
+
+library(plotrix)
+library(maps)
+library(plotly)
+
+

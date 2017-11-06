@@ -1,0 +1,13 @@
+Index,Month,Forecast,Value,Source
+1,Jan,rainy,40,989
+2,Feb,drizzle,6,869
+3,Mar,sunny,90,430
+4,Apr,clody,65,117
+5,May,sunny,8,987
+6,Jun,clody,10,784
+7,Jul,sunny,100,176
+8,Aug,clody,53,476
+9,Sep,sunny,17,431
+10,Oct,clody,35,354
+11,Nov,clody,77,244
+12,Dec,sunny,18,194
