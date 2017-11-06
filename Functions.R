@@ -10,6 +10,7 @@ loadhistory()
 
 #Search
 
+
 x<- c(1,2,3,4,5,9,9)
 x1<-c(9,6,3,4,5,6,7)
 all(x>0)
