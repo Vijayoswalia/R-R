@@ -4,6 +4,8 @@ read_file <- function(x){
   
 
 }
+x = list.files(pattern = "*.csv")
+x("R.csv")
 v <- c("R.csv", "R_2.csv","R_3.csv","R_4.csv","R_5.csv")
 summary(read_file("R.csv"))
 data.frame(read_file(v))
