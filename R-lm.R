@@ -6,8 +6,8 @@ plot(modelmtcars)
 
 modelmtcars = lm(disp ~ hp, data = mtcars)
 library(analytics)
-model1  = lm(Ozone ~ Wind+Temp+Solar.R-1, data=ozone_clean)
-modelmodel1
+model1 = lm(Ozone ~ Wind+Temp+Solar.R-1, data=ozone_clean)
+summary(model1)
 model2  = lm(Ozone ~ Wind+Temp, data=ozone_clean)
 model2
 model3  = lm(Ozone ~ Wind+Solar.R, data=ozone_clean)
@@ -26,3 +26,11 @@ plot(model1)
 plot(model2)
 plot(model3)
 plot(model4)
+
+
+stats = c(35, 40, 62, 78, 87)
+maths = c(50, 65, 72,88, 92)
+Lmodel1 = lm(stats ~ maths)
+Lmodel1
+summary(Lmodel1)
+resid(Lmodel1)
